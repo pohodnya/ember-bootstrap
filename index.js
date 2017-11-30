@@ -15,6 +15,7 @@ const BroccoliDebug = require('broccoli-debug');
 const chalk = require('chalk');
 const SilentError = require('silent-error'); // From ember-cli
 const VersionChecker = require('ember-cli-version-checker');
+const fastbootTransform = require('fastboot-transform');
 
 const defaultOptions = {
   importBootstrapTheme: false,
@@ -203,7 +204,7 @@ module.exports = {
       'register-version.template',
       'register-version.js'
     );
-    trees.push(versionTree);
+    trees.push(fastbootTransform(versionTree));
 
     if (!this.hasPreprocessor()) {
       trees.push(new Funnel(this.getBootstrapStylesPath(), {

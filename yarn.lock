@@ -4142,7 +4142,7 @@ fastboot-express-middleware@^1.1.0:
     fastboot "^1.1.0"
     request "^2.81.0"
 
-fastboot-transform@^0.1.0:
+fastboot-transform@^0.1.0, fastboot-transform@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/fastboot-transform/-/fastboot-transform-0.1.2.tgz#f910d666ab93e75604492ea655270d1804bc8de7"
   dependencies:
